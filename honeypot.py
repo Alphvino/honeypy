@@ -121,7 +121,7 @@ def threadedfunction(client):
         chan.close()
         print(f"{addr[0]}:{addr[1]} encountered an error! Released thread: {fixedgthread}")
         log.write(f"{addr[0]}:{addr[1]} encountered an error! Released thread: {fixedgthread}\n")
-        send_message("BOTOKEN", 1412637208, f"{addr[0]}:{addr[1]} encountered an error! Released thread: {fixedgthread}")
+        send_message("BOTOKEN", TELEGRAMCHATID, f"{addr[0]}:{addr[1]} encountered an error! Released thread: {fixedgthread}")
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
